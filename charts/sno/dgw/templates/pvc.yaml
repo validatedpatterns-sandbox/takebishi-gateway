@@ -3,7 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: pvc-dxpgateway
 spec:
-  storageClassName: {{ .dgw.storageClassName }}
+  storageClassName: {{ .Values.dgw.storageClassName }}
   accessModes:
     - ReadWriteOnce
   resources:
@@ -15,7 +15,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: pvc-sdcard
 spec:
-  storageClassName: {{ .dgw.storageClassName }}
+  storageClassName: {{ .Values.dgw.storageClassName }}
   accessModes:
     - ReadWriteOnce
   resources:
