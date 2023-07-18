@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: broker-mqtt-0-svc
+  namespace: broker
+  labels:
+    ActiveMQArtemis: broker
+    application: broker-app
+spec:
+  ports:
+    - name: mqtt-0
+      protocol: TCP
+      port: {{ .Values.broker.port }}
+      targetPort: {{ .Values.broker.targetPort }}
+      nodePort: {{ .Values.broker.nodePort }}
+  internalTrafficPolicy: {{ .Values.broker.internalTrafficPolicy }}
+  type: NodePort
+  selector:
+    ActiveMQArtemis: broker
+    application: broker-app
+    statefulset.kubernetes.io/pod-name: broker-ss-0

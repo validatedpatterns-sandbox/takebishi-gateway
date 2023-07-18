@@ -1,0 +1,15 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: dgw
+  labels:
+    app: dgw
+spec:
+  #  host: dgw-dgw.apps.edge-jp.demo.local
+  to:
+    kind: Service
+    name: dgw
+    weight: 100
+  port:
+    targetPort: 80-tcp
+  wildcardPolicy: None

@@ -9,16 +9,20 @@ clusterGroup:
   isHubCluster: false
 
   namespaces:
-    - config-demo
-    - hello-world
     - golang-external-secrets
+    - broker
+    - dgw
 
   subscriptions:
+    amq-broker:
+      name: amq-broker-rhel8
+      channel: 7.11.x
+      namespace: broker
 
   projects:
     - eso
-    - config-demo
-    - hello-world
+    - broker
+    - dgw
 
   applications:
     golang-external-secrets:
@@ -27,17 +31,17 @@ clusterGroup:
       project: eso
       path: common/golang-external-secrets
 
-    config-demo:
-      name: config-demo
-      namespace: config-demo
-      project: config-demo
-      path: charts/all/config-demo
+    broker:
+      name: broker
+      namespace: broker
+      project: broker
+      path: charts/sno/broker
 
-    hello-world:
-      name: hello-world
-      namespace: hello-world
-      project: hello-world
-      path: charts/all/hello-world
+    dgw:
+      name: dgw
+      namespace: dgw
+      project: dgw
+      path: charts/sno/dgw
 
   imperative:
     # NOTE: We *must* use lists and not hashes. As hashes lose ordering once parsed by helm
