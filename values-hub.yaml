@@ -89,7 +89,7 @@ clusterGroup:
       clusterPools:
         exampleAWSPool:
           size: 1
-          name: aws-ap-bandini
+          name: aws-eu-bandini
           openshiftVersion: 4.12.24
           baseDomain: blueprints.rhecoeng.com
           controlPlane:
@@ -101,7 +101,7 @@ clusterGroup:
             count: 0
           platform:
             aws:
-              region: ap-southeast-2
+              region: eu-west-3
           clusters:
           - One
       #
