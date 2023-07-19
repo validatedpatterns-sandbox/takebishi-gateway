@@ -101,7 +101,7 @@ clusterGroup:
             count: 0
           platform:
             aws:
-              region: europe-central-1
+              region: eu-central-1
       #
       #  exampleAzurePool:
       #    name: azure-us
