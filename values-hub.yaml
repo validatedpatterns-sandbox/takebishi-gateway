@@ -90,7 +90,7 @@ clusterGroup:
         exampleAWSPool:
           size: 1
           name: aws-ap
-          openshiftVersion: 4.13.4
+          openshiftVersion: 4.12.24
           baseDomain: blueprints.rhecoeng.com
           controlPlane:
             count: 1
