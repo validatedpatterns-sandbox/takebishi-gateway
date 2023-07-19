@@ -88,7 +88,7 @@ clusterGroup:
       #
       clusterPools:
         exampleAWSPool:
-          size: 1
+          size: 3
           name: aws-eu-bandini
           openshiftVersion: 4.12.24
           baseDomain: blueprints.rhecoeng.com
@@ -104,6 +104,8 @@ clusterGroup:
               region: eu-west-3
           clusters:
           - One
+          - Two
+          - Three
       #
       #  exampleAzurePool:
       #    name: azure-us
