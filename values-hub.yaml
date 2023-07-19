@@ -86,24 +86,24 @@ clusterGroup:
       #   credentials and OCP pull secrets are defined in Vault.
       #   See values-secret.yaml.template
       #
-      clusterPools:
-        exampleAWSPool:
-          size: 1
-          name: aws-ap-bandini
-          openshiftVersion: 4.12.24
-          baseDomain: blueprints.rhecoeng.com
-          controlPlane:
-            count: 1
-            platform:
-              aws:
-                type: m5.2xlarge
-          workers:
-            count: 0
-          platform:
-            aws:
-              region: ap-southeast-2
-          clusters:
-          - One
+      # clusterPools:
+      #   exampleAWSPool:
+      #     size: 1
+      #     name: aws-ap-bandini
+      #     openshiftVersion: 4.12.24
+      #     baseDomain: blueprints.rhecoeng.com
+      #     controlPlane:
+      #       count: 1
+      #       platform:
+      #         aws:
+      #           type: m5.2xlarge
+      #     workers:
+      #       count: 0
+      #     platform:
+      #       aws:
+      #         region: ap-southeast-2
+      #     clusters:
+      #     - One
       #
       #  exampleAzurePool:
       #    name: azure-us
