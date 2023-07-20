@@ -11,6 +11,7 @@ clusterGroup:
   namespaces:
     - golang-external-secrets
     - broker
+    - dgw
 
   subscriptions:
     amq-broker:
