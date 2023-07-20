@@ -1,6 +1,6 @@
 apiVersion: v2
-description: An empty Helm chart
+description: Device Gateway helm chart
 keywords:
-- pattern
-name: blank
+- device-gateway
+name: device-gateway
 version: 0.0.1
