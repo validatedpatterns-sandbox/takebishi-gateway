@@ -1,22 +1,22 @@
-apiVersion: broker.amq.io/v1beta1
-kind: ActiveMQArtemis
-metadata:
-  name: broker
-  namespace: broker
-spec:
-  acceptors:
-    - expose: true
-      name: mqtt
-      port: 1883
-      protocols: mqtt
-  adminPassword: admin
-  adminUser: admin
-  deploymentPlan:
-    image: placeholder
-    jolokiaAgentEnabled: false
-    journalType: nio
-    managementRBACEnabled: true
-    messageMigration: false
-    persistenceEnabled: false
-    requireLogin: false
-    size: 1
+# apiVersion: broker.amq.io/v1beta1
+# kind: ActiveMQArtemis
+# metadata:
+#   name: broker
+#   namespace: broker
+# spec:
+#   acceptors:
+#     - expose: true
+#       name: mqtt
+#       port: 1883
+#       protocols: mqtt
+#   adminPassword: admin
+#   adminUser: admin
+#   deploymentPlan:
+#     image: placeholder
+#     jolokiaAgentEnabled: false
+#     journalType: nio
+#     managementRBACEnabled: true
+#     messageMigration: false
+#     persistenceEnabled: false
+#     requireLogin: false
+#     size: 1
