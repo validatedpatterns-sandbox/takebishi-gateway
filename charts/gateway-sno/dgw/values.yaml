@@ -1,2 +1,2 @@
-tree:
-  of: "values"
+dgw:
+  storageclass: gp3-csi
