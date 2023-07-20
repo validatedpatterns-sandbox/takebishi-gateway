@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dgw
+spec:
+  strategy: {}
+  selector:
+    matchLabels:
+      app: dgw
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: dgw
+    spec:
+      containers:
+        - name: container
+          image: quay.io/yono/dgw:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+              protocol: TCP
+            - containerPort: 443
+              protocol: TCP
+          volumeMounts:
+          - mountPath: "/etc/dxpgateway"
+            name: pvc-dxpgateway
+          - mountPath: /mnt/sdcard
+            name: pvc-sdcard
+          # - mountPath: /etc/dxpgateway/config/setting.dxg
+          #   subPath: setting.dxg
+          #   name: setting
+          securityContext:
+            privileged: true
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "50m"
+            limits:
+              memory: "128Mi"
+              cpu: "100m"
+      volumes:
+      - name: pvc-dxpgateway
+        persistentVolumeClaim:
+          claimName: pvc-dxpgateway 
+      - name: pvc-sdcard
+        persistentVolumeClaim:
+          claimName: pvc-sdcard
+      # - name: setting
+      #   configMap:
+      #     name: dgw-settings
+      #     items:
+      #       - key: setting.dxg
+      #         path: setting.dxg
+
+              
+      serviceAccount: dgw
+      serviceAccountName: dgw
