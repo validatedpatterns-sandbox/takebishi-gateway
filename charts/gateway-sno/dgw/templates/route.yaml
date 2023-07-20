@@ -5,7 +5,7 @@ metadata:
   labels:
     app: dgw
 spec:
-  host: dgw-dgw.apps.edge-jp.demo.local
+  # host: auto determined - no need to provide host name
   to:
     kind: Service
     name: dgw
