@@ -82,26 +82,25 @@ clusterGroup:
       - name: clusterGroup.isHubCluster
         value: false
 
-      # clusterPools:
-      #   exampleAWSPool:
-      #     size: 3
-      #     name: aws-eu-bandini
-      #     openshiftVersion: 4.12.24
-      #     baseDomain: blueprints.rhecoeng.com
-      #     controlPlane:
-      #       count: 1
-      #       platform:
-      #         aws:
-      #           type: m5.2xlarge
-      #     workers:
-      #       count: 0
-      #     platform:
-      #       aws:
-      #         region: eu-west-3
-      #     clusters:
-      #     - One
-      #     - Two
-      #     - Three
+      clusterPools:
+        exampleAWSPool:
+          size: 2
+          name: aws-eu-bandini
+          openshiftVersion: 4.12.24
+          baseDomain: blueprints.rhecoeng.com
+          controlPlane:
+            count: 1
+            platform:
+              aws:
+                type: m5.2xlarge
+          workers:
+            count: 0
+          platform:
+            aws:
+              region: eu-west-3
+          clusters:
+          - One
+          - Two
 
       # Before enabling cluster provisioning, ensure AWS and/or Azure
       #   credentials and OCP pull secrets are defined in Vault.
