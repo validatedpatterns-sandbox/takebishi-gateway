@@ -20,9 +20,6 @@ spec:
     persistenceEnabled: false
     requireLogin: false
     size: 1
-    extraMounts:
-      secrets:
-      - "broker-override-secrets"
   env:
   - name: AMQ_PASSWORD
     valueFrom:
