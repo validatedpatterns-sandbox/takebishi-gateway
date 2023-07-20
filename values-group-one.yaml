@@ -9,8 +9,6 @@ clusterGroup:
   isHubCluster: false
 
   namespaces:
-    - config-demo
-    - hello-world
     - golang-external-secrets
     - broker
 
@@ -22,7 +20,6 @@ clusterGroup:
 
   projects:
     - eso
-    - config-demo
     - dw-gateway
 
   applications:
@@ -37,6 +34,12 @@ clusterGroup:
       namespace: broker
       project: dw-gateway
       path: charts/gateway-sno/broker
+
+    device-gateway:
+      name: dgw
+      namespace: dgw
+      project: dw-gateway
+      path: charts/gateway-sno/dgw
 
   imperative:
     # NOTE: We *must* use lists and not hashes. As hashes lose ordering once parsed by helm
