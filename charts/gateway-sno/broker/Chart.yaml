@@ -1,6 +1,6 @@
 apiVersion: v2
-description: An empty Helm chart
+description: Broker configuration helm chart
 keywords:
-- pattern
-name: blank
+- broker
+name: broker_config
 version: 0.0.1
