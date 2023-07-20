@@ -12,8 +12,13 @@ clusterGroup:
     - config-demo
     - hello-world
     - golang-external-secrets
+    - broker
 
   subscriptions:
+    amq-broker:
+      name: amq-broker-rhel8
+      channel: 7.11.x
+      namespace: broker    
 
   projects:
     - eso
