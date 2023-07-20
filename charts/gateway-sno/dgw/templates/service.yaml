@@ -5,7 +5,7 @@ metadata:
   labels:
     app: dgw
 spec:
-  type: NodePort
+  type: ClusterIP
   ports:
     - name: 80-tcp
       protocol: TCP
