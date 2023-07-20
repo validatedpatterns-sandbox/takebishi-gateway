@@ -77,7 +77,6 @@ metadata:
     cluster.open-cluster-management.io/createmanagedcluster: "true"
   labels:
     clusterClaimName: {{ lower . }}-{{ lower $group.name }}
-    name: {{ lower . }}-{{ lower $group.name }}
   {{- if (not $group.acmlabels) }}
     clusterGroup: {{ $group.name }}
   {{- else if eq (len $group.acmlabels) 0 }}
