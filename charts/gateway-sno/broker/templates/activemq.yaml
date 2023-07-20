@@ -23,6 +23,6 @@ spec:
     extraMounts:
       secrets:
       - "broker-override-secrets"
-    env:
-    - name: TESTME
-      value: sapporo123
+  env:
+  - name: TESTME
+    value: sapporo123
