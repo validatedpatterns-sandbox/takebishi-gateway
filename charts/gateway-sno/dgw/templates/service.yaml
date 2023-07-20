@@ -1,0 +1,19 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: dgw
+  labels:
+    app: dgw
+spec:
+  type: NodePort
+  ports:
+    - name: 80-tcp
+      protocol: TCP
+      port: 80
+      targetPort: 80
+    - name: 443-tcp
+      protocol: TCP
+      port: 443
+      targetPort: 443
+  selector:
+    app: dgw
