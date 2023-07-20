@@ -24,5 +24,8 @@ spec:
       secrets:
       - "broker-override-secrets"
   env:
-  - name: TESTME
-    value: sapporo123
+  - name: AMQ_PASSWORD
+    valueFrom:
+      secretKeyRef:
+        key: AMQ_PASSWORD
+        name: broker-override-secrets
