@@ -26,7 +26,8 @@ clusterGroup:
       name: acm
       namespace: open-cluster-management
       project: hub
-      path: common/acm
+      # path: common/acm
+      chart: acm
       ignoreDifferences:
       - group: internal.open-cluster-management.io
         kind: ManagedClusterInfo
@@ -37,13 +38,15 @@ clusterGroup:
       name: vault
       namespace: vault
       project: hub
-      path: common/hashicorp-vault
+      # path: common/hashicorp-vault
+      chart: hashicorp-vault
 
     golang-external-secrets:
       name: golang-external-secrets
       namespace: golang-external-secrets
       project: hub
-      path: common/golang-external-secrets
+      # path: common/golang-external-secrets
+      chart: golang-external-secrets
 
     config-demo:
       name: config-demo
