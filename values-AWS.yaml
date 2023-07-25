@@ -1,3 +1,6 @@
+dgw:
+  # FIXME(bandini): check that this class is okay
+  storageClassName: gp3-csi
 # The following snippet can be commented out in oroder
 # to enable letsencrypt certificates on API endpoint and default
 # ingress of the cluster
