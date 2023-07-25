@@ -86,7 +86,7 @@ clusterGroup:
         exampleAWSPool:
           size: 4
           name: aws-eu-west-3-sno
-          openshiftVersion: 4.12.26
+          openshiftVersion: 4.12.24
           baseDomain: blueprints.rhecoeng.com
           controlPlane:
             count: 1
