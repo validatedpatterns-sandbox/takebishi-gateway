@@ -20,6 +20,8 @@ clusterGroup:
       namespace: broker
 
   projects:
+    - config-demo
+    - hello-world
     - eso
     - broker
     - dgw
