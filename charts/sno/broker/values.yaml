@@ -1,0 +1,9 @@
+# Default values for broker.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+broker:
+  port: 1883
+  targetPort: 1883
+  nodePort: 30000
+  internalTrafficPolicy: Cluster
