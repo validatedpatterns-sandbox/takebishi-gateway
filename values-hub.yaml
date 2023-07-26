@@ -28,6 +28,7 @@ clusterGroup:
       project: hub
       # path: common/acm
       chart: acm
+      targetRevision: 0.0.*
       ignoreDifferences:
       - group: internal.open-cluster-management.io
         kind: ManagedClusterInfo
@@ -40,6 +41,7 @@ clusterGroup:
       project: hub
       # path: common/hashicorp-vault
       chart: hashicorp-vault
+      targetRevision: 0.0.*
 
     golang-external-secrets:
       name: golang-external-secrets
@@ -47,6 +49,7 @@ clusterGroup:
       project: hub
       # path: common/golang-external-secrets
       chart: golang-external-secrets
+      targetRevision: 0.0.*
 
     config-demo:
       name: config-demo
