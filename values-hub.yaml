@@ -50,6 +50,8 @@ clusterGroup:
       # path: common/golang-external-secrets
       chart: golang-external-secrets
       chartVersion: 0.0.*
+      extraValueFiles:
+        - override/test1.yaml
 
     config-demo:
       name: config-demo
